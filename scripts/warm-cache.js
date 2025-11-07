@@ -2,15 +2,9 @@
 
 const https = require('https');
 
-const defaultHost = 'https://www.homeesfytestwebsite.com';
-const deploymentHost = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : defaultHost;
+const deploymentHost = process.env.WARM_CACHE_HOST || 'https://www.homeesfytestwebsite.com';
 
-const pathsToWarm = [
-  '/',
-  '/amenities.html',
-  '/gallery.html',
-  '/thankyou.html'
-];
+const pathsToWarm = ['/'];
 
 function warmUrl(url) {
   return new Promise((resolve) => {
