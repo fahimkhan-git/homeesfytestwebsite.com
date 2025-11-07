@@ -1024,6 +1024,15 @@ WhatsApp
 <script src=assets/js/custom.js defer></script>
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/countrydata.js" defer></script>
+<script type="module">
+  import { injectSpeedInsights } from 'https://esm.sh/@vercel/speed-insights@1';
+
+  try {
+    injectSpeedInsights();
+  } catch (error) {
+    console.error('Vercel Speed Insights failed to initialize:', error);
+  }
+</script>
 <script>
   function initializeWebsite() {
         try {
