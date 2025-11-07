@@ -1,0 +1,10 @@
+{
+  "name": "homeesfytestwebsite",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node -e \"console.log('Static site build: no compilation required')\"",
+    "postbuild": "node scripts/warm-cache.js"
+  }
+}
+

@@ -4352,15 +4352,14 @@ body {
 
 /* Add this to the top of your style.css */
 
-/* cormorant-garamond-600 - latin */
+/* cormorant-garamond - latin */
 @font-face {
   font-display: swap;
   /* This is crucial: it shows a fallback font while yours loads */
   font-family: 'Cormorant Garamond';
   font-style: normal;
-  font-weight: 600;
-  src: url('../assets/fonts/cormorant-garamond-v16-latin-600.woff2') format('woff2');
-  /* Adjust path as needed */
+  font-weight: 400;
+  src: url('assets/fonts/cormorant-garamond-v20-latin-regular.woff2') format('woff2');
 }
 
 @keyframes popouteffect {
