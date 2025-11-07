@@ -2,9 +2,12 @@
 
 const https = require('https');
 
-const deploymentHost = process.env.WARM_CACHE_HOST || 'https://www.homeesfytestwebsite.com';
-
-const pathsToWarm = ['/'];
+const urlsToWarm = [
+  'https://www.homeesfytestwebsite.com/',
+  'https://www.homeesfytestwebsite.com/style.css',
+  'https://www.homeesfytestwebsite.com/assets/js/main.js',
+  'https://www.homeesfytestwebsite.com/assets/images/banner/banner.webp'
+];
 
 function warmUrl(url) {
   return new Promise((resolve) => {
@@ -22,8 +25,7 @@ function warmUrl(url) {
 }
 
 (async () => {
-  for (const path of pathsToWarm) {
-    const url = new URL(path, deploymentHost).toString();
+  for (const url of urlsToWarm) {
     await warmUrl(url);
   }
 })();
